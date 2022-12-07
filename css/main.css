@@ -1,0 +1,122 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Work Sans', sans-serif; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    flex-wrap: wrap;
+}
+main {
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    background-color: var(--background-headings-buttons);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 900px;
+}
+.container > div {
+    padding: 50px;
+    width: 300px;
+}
+.container .sedans {
+    background-color: var(--Bright-orange);
+}
+.container .sedans a.more {
+    color: var(--Bright-orange);
+}
+.container .suvs {
+    background-color: var(--Dark-cyan);
+}
+.container .suvs a.more {
+    color: var(--Dark-cyan);
+}
+.container .luxury {
+    background-color: var(--Very-dark-cyan);
+}
+.container .luxury a.more {
+    color: var(--Very-dark-cyan);
+}
+.container > div > img {
+    margin-bottom: 20px;
+}
+.container > div h2 {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: var(--background-headings-buttons);
+    margin-bottom: 20px;
+}
+.container > div h2 + p {
+    color: var(--paragraphs);
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+.container > div a.more {
+    text-decoration: none;
+    background-color: var(--background-headings-buttons);
+    width: 100px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.container > div a.more:hover {
+    background-color: inherit;
+    color: white;
+    border: 2px solid var(--background-headings-buttons);
+}
+@media (min-width: 425px) and (max-width: 767px) {
+    .container {
+        width: 750px;
+    }
+    .container > div {
+        padding: 40px;
+    }
+}
+@media(max-width: 425px) {
+    body {
+        flex-direction: row;
+    }
+    main {
+        margin-bottom: 0;
+    }
+    .container {
+        width: 280px;
+        border-radius: 0%;
+        text-align: center;
+    }
+    .container > div {
+        padding: 20px;
+    }
+    .container > div img {
+        margin-bottom: 10px;
+    }
+    .container > div > h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .container > div > h2 + p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+}
